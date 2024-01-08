@@ -1,0 +1,10 @@
+{
+    "name": "com.example.pythonnativehost",
+    "description": "mpv loader",
+    "path": "D:\\Code\\JavaScript\\Edge Extention\\dist\\native.exe",
+    "type": "stdio",
+    "allowed_origins": [
+      "chrome-extension://phpafefmdhpnogfcfblpcffkhcledopo/"
+    ]
+  }
+  
