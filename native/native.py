@@ -2,6 +2,8 @@ import json
 import sys
 import subprocess
 
+videoplayer_executable_path = "\\path\\to\\your\\videoplayer.exe"
+
 
 def process_message(message):
     command = message.get("command", "")
@@ -14,7 +16,7 @@ def process_message(message):
 
 
 def execute_command(command):
-    cmd_command = f"\\path\\to\\your\\videoplayer.exe {command}"
+    cmd_command = f"{videoplayer_executable_path} {command}"
     subprocess.Popen(cmd_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 

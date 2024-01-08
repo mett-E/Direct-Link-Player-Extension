@@ -4,7 +4,7 @@
     "path": "\\path\\to\\native.exe",
     "type": "stdio",
     "allowed_origins": [
-      "chrome-extension://yourExtensionId/"
+      "chrome-extension://EXTENSION-ID/"
     ]
   }
   
