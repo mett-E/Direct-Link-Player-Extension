@@ -4,11 +4,9 @@ import subprocess
 
 
 def process_message(message):
-    # Process the message and execute the desired command
     command = message.get("command", "")
     if command:
         try:
-            # Execute the command
             result = execute_command(command)
             send_response(result)
         except Exception as e:
@@ -16,24 +14,21 @@ def process_message(message):
 
 
 def execute_command(command):
-    cmd_command = f"d:\MPV\mpv.exe {command}"
+    cmd_command = f"\\path\\to\\your\\videoplayer.exe {command}"
     subprocess.Popen(cmd_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
 def send_response(response):
-    # Send the response back to the extension
     sys.stdout.buffer.write(json.dumps({"result": response}).encode("utf-8"))
     sys.stdout.flush()
 
 
 def send_error(error_message):
-    # Send an error message back to the extension
     sys.stdout.buffer.write(json.dumps({"error": error_message}).encode("utf-8"))
     sys.stdout.flush()
 
 
 def read_input():
-    # Read the input message from the extension
     raw_message_length = sys.stdin.buffer.read(4)
     if not raw_message_length:
         return None

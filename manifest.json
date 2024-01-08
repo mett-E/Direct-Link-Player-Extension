@@ -1,9 +1,8 @@
-
 {
-  "name": "MPV Loader",
+  "name": "Player Loader",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "Opens links with MPV",
+  "description": "Opens links with Player",
   "background": {
     "scripts": ["background.js"]
   },

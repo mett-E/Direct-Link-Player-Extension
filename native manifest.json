@@ -1,10 +1,10 @@
 {
-    "name": "com.example.pythonnativehost",
-    "description": "mpv loader",
-    "path": "D:\\Code\\JavaScript\\Edge Extention\\dist\\native.exe",
+    "name": "com.metti.pythonnativehost",
+    "description": "player loader",
+    "path": "\\path\\to\\native.exe",
     "type": "stdio",
     "allowed_origins": [
-      "chrome-extension://phpafefmdhpnogfcfblpcffkhcledopo/"
+      "chrome-extension://yourExtensionId/"
     ]
   }
   

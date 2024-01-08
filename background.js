@@ -1,8 +1,6 @@
-function sendCommandToPython(com) {
-  // alert(com)
-  const message = { command: com };
-  chrome.runtime.sendNativeMessage('com.example.pythonnativehost', message);
-  // alert("done")
+function sendCommandToPython(link) {
+  const message = { command: link };
+  chrome.runtime.sendNativeMessage('com.metti.pythonnativehost', message);
 }
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
@@ -12,7 +10,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
 }});
 
 chrome.contextMenus.create({
-  title: "Open with MPV",
+  title: "Open in Player",
   id: "pythonNativeContextMenu",
   contexts: ["all"],
 });
